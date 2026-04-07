@@ -1,0 +1,22 @@
+# --- KICAD ---
+*.bak
+*-bak
+*.bck
+*~
+_autosave-*
+*.tmp
+*.lock
+*.net
+*.dcm
+*.kicad_prl
+fp-info-cache
+Solar_LiPo_charger_gerbers/
+Solar_LiPo_charger-backups/
+
+# --- ARDUINO ---
+# Ignoruj foldery budowania (kompilacji)
+build/
+*.elf
+*.hex
+*.bin
+*.map
