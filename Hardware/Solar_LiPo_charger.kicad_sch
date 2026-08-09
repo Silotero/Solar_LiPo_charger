@@ -4720,6 +4720,16 @@
 		)
 		(uuid db1da5d3-ec5b-4849-a05f-81f043751398)
 	)
+	(text "Tu był błąd D4 szło od pmos do cewki\nZmieniono na pmos prosto do cewki\nWstawiono diode między nie i do masy\n"
+		(exclude_from_sim no)
+		(at 45.72 18.796 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0fb975ff-a9ce-4e7b-8607-e6e8e2da80e5")
+	)
 	(text "Ochrona baterii, powinna działać dla 6A w jedną i drugą stronę"
 		(exclude_from_sim no)
 		(at 247.65 16.764 0)
@@ -4769,6 +4779,26 @@
 			)
 		)
 		(uuid "aad32796-66fd-4966-a4a8-329d8cd18ad0")
+	)
+	(text "Wartość rezystora przed diodami wylicz i wlutuj dopiero jak zobaczysz\n jakie dostajesz napięcie, na początku 5k"
+		(exclude_from_sim no)
+		(at 51.308 100.584 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e0938fca-b7fa-4edd-bee6-fcb4914f0114")
+	)
+	(text "D+ i D- powinny być połączone\ntelefony sprawdzają linie D+ i D-\njeśli nie są połączone\nto uznają że ładowarka\njest najgorszego sortu\npobierają najmniejszą\nilość prądu\n"
+		(exclude_from_sim no)
+		(at 125.222 163.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ed23669e-ae28-466b-82fb-d2a45f78578e")
 	)
 	(junction
 		(at 218.44 116.84)
@@ -5003,6 +5033,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7f79d45a-f5f1-43ee-a2cf-17ef354c007c")
+	)
+	(junction
+		(at 91.44 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "81019ba4-c700-4283-8cc4-f6a3202fb6ad")
 	)
 	(junction
 		(at 24.13 59.69)
@@ -5378,6 +5414,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 29.21) (xy 91.44 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cc51cec-82f2-45d2-8a31-765114d41e7a")
+	)
+	(wire
+		(pts
 			(xy 220.98 146.05) (xy 220.98 151.13)
 		)
 		(stroke
@@ -5615,6 +5661,16 @@
 			(type default)
 		)
 		(uuid "42fdce40-7324-49a5-8542-27bbccf50d13")
+	)
+	(wire
+		(pts
+			(xy 91.44 29.21) (xy 100.33 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4478bd6b-6145-471f-a86d-96dc5dee4320")
 	)
 	(wire
 		(pts
@@ -6298,16 +6354,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 29.21) (xy 100.33 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bcfd5508-2196-4a3d-bd0f-e94f4de5e014")
-	)
-	(wire
-		(pts
 			(xy 256.54 104.14) (xy 265.43 104.14)
 		)
 		(stroke
@@ -6545,16 +6591,6 @@
 			(type default)
 		)
 		(uuid "dd2c3fde-d8d4-4eb3-82d2-38d1c35d4d34")
-	)
-	(wire
-		(pts
-			(xy 74.93 29.21) (xy 87.63 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de2b45d6-195f-4d6d-b869-354839aba497")
 	)
 	(wire
 		(pts
@@ -7315,10 +7351,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "09c1c4cb-83e8-4c65-9a2e-7e5aeb4334d6")
 		(property "Reference" "C14"
-			(at 53.34 31.7499 0)
+			(at 48.768 24.638 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7326,8 +7361,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470n"
-			(at 53.34 34.2899 0)
+		(property "Value" "10u"
+			(at 49.022 26.924 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7395,7 +7430,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22u"
 			(at 32.766 139.7 0)
 			(effects
 				(font
@@ -7532,7 +7567,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
+		(property "Value" "10u"
 			(at 99.822 137.922 0)
 			(effects
 				(font
@@ -7618,7 +7653,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://www.tme.eu/pl/details/ao4407a/tranzystory-z-kanalem-p-smd/alpha-omega-semiconductor/"
 			(at 57.15 31.75 0)
 			(effects
 				(font
@@ -7785,7 +7820,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://www.tme.eu/pl/details/wms15n03t1-cyg/tranzystory-z-kanalem-n-smd/wayon/wms15n03t1/"
 			(at 264.16 20.32 0)
 			(effects
 				(font
@@ -8121,7 +8156,7 @@
 	)
 	(symbol
 		(lib_id "Diode:SS34")
-		(at 91.44 29.21 180)
+		(at 91.44 33.02 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8130,23 +8165,25 @@
 		(fields_autoplaced yes)
 		(uuid "242e547a-33e5-4b1b-813e-7b6c3ddcc8a2")
 		(property "Reference" "D4"
-			(at 91.7575 22.86 0)
+			(at 93.98 31.4324 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "SL82-3G"
-			(at 91.7575 25.4 0)
+			(at 93.98 33.9724 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMC"
-			(at 91.44 24.765 0)
+			(at 86.995 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8155,7 +8192,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
-			(at 91.44 29.21 0)
+			(at 91.44 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8164,7 +8201,7 @@
 			)
 		)
 		(property "Description" "40V 3A Schottky Diode, SMA"
-			(at 91.44 29.21 0)
+			(at 91.44 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9616,7 +9653,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.way-on.cn/upload/202301/31/202301311441465755.pdf"
+		(property "Datasheet" "https://www.tme.eu/pl/details/wms15n03t1-cyg/tranzystory-z-kanalem-n-smd/wayon/wms15n03t1/"
 			(at 264.16 55.88 0)
 			(effects
 				(font
@@ -9697,8 +9734,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7u"
-			(at 109.474 138.938 0)
+		(property "Value" "10u"
+			(at 109.474 138.176 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9900,7 +9937,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "5k"
 			(at 26.67 57.1499 0)
 			(effects
 				(font
@@ -11138,7 +11175,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7u"
+		(property "Value" "22u"
 			(at 39.116 139.7 0)
 			(effects
 				(font
@@ -11817,7 +11854,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
+		(property "Value" "10u"
 			(at 104.648 138.176 0)
 			(effects
 				(font
@@ -12120,6 +12157,72 @@
 			(project "Solar_LiPo_charger"
 				(path "/929c46f8-95fd-4d35-95df-ed136586ef48"
 					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a02c6436-69d4-4d04-a026-68d36057febc")
+		(property "Reference" "#PWR037"
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 91.44 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c6b0b26f-afe5-42fb-84b4-fce3e9e09acf")
+		)
+		(instances
+			(project "Solar_LiPo_charger"
+				(path "/929c46f8-95fd-4d35-95df-ed136586ef48"
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -13157,7 +13260,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470n"
+		(property "Value" "10u"
 			(at 133.35 26.416 0)
 			(effects
 				(font
@@ -14543,7 +14646,7 @@
 		(dnp no)
 		(uuid "ef69538b-4159-4a1e-b350-ecdf8d9c105f")
 		(property "Reference" "C19"
-			(at 128.524 24.384 0)
+			(at 127.762 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14552,7 +14655,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 129.032 27.178 0)
+			(at 128.27 26.416 0)
 			(effects
 				(font
 					(size 1.27 1.27)
